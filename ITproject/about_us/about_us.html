@@ -1,127 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="descreption" content="we are an innovative educational platform" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us</title>
   <style>
-  a {
-    text-decoration: none;
-    color:#b8001f ;  /* اللون الفاتح */
-  }
-  
-  header {
-    color: #FCFAEE;  /* اللون الفاتح */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background: #023e8a;
+      color: #333;
+    }
+
+    header {
+    color: black;
     text-align: center;
     position: fixed;
-    width: auto;
-    height: auto;
+    width: 60PX;
+    height:40PX ;
     border-radius: 50%;
     z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
-    /* background-color: #384B70;  الأزرق الداكن */
-    left: 0;
-    top: 0;
-  }
-  
-  header.logo {
+    margin: 20px;
+    background-color:white ;  
+    left: 10;  
+    top: 10;
+   }
+   header.logo {
     font-size: 30px;
     text-transform: uppercase;
-  }
-  
-  header a {
-    padding: 6px 15px;
-    border-radius: 20px;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 40px;
-    line-height: 1.6;
-    background: linear-gradient(to right, #FCFAEE, #507687, #384B70);
-    /* تدرج الخلفية */
-  }
-  
-  .container {
-    background-color: #384B70;  /* الأزرق الداكن */
-    max-width: 800px;
-    margin: auto;
     text-align: center;
-    margin-top: 0px;
-    margin-bottom: 100px;
-    padding: 100px;
-    border-radius: 50%;
-  }
-  
-  p {
-    font-size: 1.2em;
-    color: #FCFAEE;  /* اللون الفاتح */
-    margin-bottom: 80px;
-  }
-  
-  img {
-    width: 250px;
-    height: 250px;
-    margin-top: 60px;
-    margin-right: 45px;
-  }
-  
-  #readMoreBtn {
-    margin-top: 200px;
-    padding: 10px 16px;
-    background-color: #FCFAEE;  /* اللون الفاتح */
-    color: #384B70;  /* الأزرق الداكن */
-    border: 2px solid #FCFAEE;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  #readMoreBtn {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-</style>  
-  
+    
+   }  
+
+   header a {
+    padding: 6px 15px;
+    border-radius:20px ;
+   }
+
+
+    .about-section {
+      display: flex;
+      align-items: center;
+      padding: 60px;
+      gap: 60px;
+    }
+
+    .about-img img {
+      width: 350px;
+      border-radius: 8px;
+      margin-left: 200PX;
+    }
+
+    .about-text h1 {
+      font-size: 48px;
+      color: white;
+      margin-bottom: 20px;
+      margin-left:80PX;
+    }
+
+    .about-text p {
+      max-width: 500px;
+      font-size: 16px;
+      margin-left: 80PX;
+      line-height: 1.6;
+      color: white;
+    }
+
+    .facbook-icon{
+      text-decoration: none;
+      padding-left: 400PX;
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1><a href="C:\Users\user\OneDrive\Desktop\it projrct\html\project1\ITproject\home\home.html" class="logo"> C S A </a></h1>    
-   </header>
-  <div class="container">
-    <p>About Our Educational Platform</p>
-    <p>Our platform is more than just a place to learn — it's a community built for dreamers, doers, and future creators. We believe that education should be flexible, inspiring, and accessible to everyone, no matter where they are.
-      Founded with the goal of making high-quality learning available to all, our platform is for Web development and programming basics. Whether you're just starting your journey or looking to sharpen your skills, you'll find resources designed to help you grow at your own pace.
-      With expert instructors, real-world projects, and a supportive community, we turn learning into an experience — not just a task. Our mission is to unlock potential, build confidence, and shape the tech leaders of tomorrow.
-      Welcome to a new way of learning. Welcome to the future.</p>
+    <div><strong>CSA</strong></div>
+  </header>
 
-      <p>
-        We are a passionate team of developers
-        <span id="moreText">, designers, and dreamers. Our mission is to create unique digital experiences for the world.</span>
-      </p>
+  <section class="about-section">
+    <div class="about-img">
+      <img src="CSA.jpeg" alt="Designer">
+    </div>
+    <div class="about-text">
+      <h1>ABOUT US</h1>
+      <p>Our platform is dedicated to delivering high-quality education by combining flexibility, affordability, and accessibility. We provide free online lessons to support students wherever they are, ensuring they can learn at their own pace and convenience. For those who prefer in-person guidance, we offer structured sessions at our educational center for a fixed and reasonable fee. <br></br>
+        In addition to these services, we also sell curriculum-aligned textbooks that complement our lessons and help students deepen their understanding of each subject. Our goal is to create a supportive learning environment that empowers students with the tools and resources they need to succeed academically.</p>
     
-      <button id="readMoreBtn">Read More</button>
+    </div>
+  </section>
+  <a href="https://www.facebook.com/your_actual_page" target="_blank">
+    <img class="facbook-icon" src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width:32px; height:32px;">
+  </a>
+  <script>
 
-      <img src="csa image.jpeg" alt="Image 1">
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
 
-      <script> 
-       const btn = document.getElementById("readMoreBtn");
-       const moreText = document.getElementById("moreText");
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const scrollPos = window.scrollY || document.documentElement.scrollTop;
+  
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 100;
+        const bottom = top + sec.offsetHeight;
+        const id = sec.getAttribute('id');
+        const navLink = document.querySelector(`nav a[href="#${id}"]`);
+        if (scrollPos >= top && scrollPos <= bottom && navLink) {
+          document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+          navLink.classList.add('active');
+        }
+      });
+    });
+  </script>
 
-       btn.addEventListener("click", function () {
-         if (moreText.style.display === "none") {
-           moreText.style.display = "inline";
-           btn.textContent = "Read Less";
-         } else {
-           moreText.style.display = "none";
-           btn.textContent = "Read More";
-         }
-       });
-      </script>
 </body>
 </html>
